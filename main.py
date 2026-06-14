@@ -1,5 +1,12 @@
+import config
+import loader
+
+
 def main():
-    print("Hello from hedge-fund-analysis!")
+    df = loader.clean_data(loader.load_data())
+    print(df.info)
+    for c in config.FACTOR_COLS:
+        print(df[c].describe())
 
 
 if __name__ == "__main__":
