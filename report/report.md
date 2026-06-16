@@ -6,7 +6,7 @@ Before analysing, the data was cleaned on input by removing observations where f
 ## Q2.1. Multilinear Regression Model
 A multilinear regression model was fitted using Ordinary Least Squares (OLS) to estimate the relationship between fund returns and risk factors. The dependent variable was the fund return series,  while the independent variables were the provided factor returns. 
 The regression specification was: 
-$$ R_t = \alpha + \beta_1F_{1, t}+\beta_2F_{2, t}+\ldots + \beta_nF_{n, t}+\epsilon_t $$
+$$R_t = \alpha + \beta_1F_{1, t}+\beta_2F_{2, t}+\ldots + \beta_nF_{n, t}+\epsilon_t$$
 where $R_t$ represents hedge fund returns, $\alpha$ represents fund alpha, $\beta_i$ represents exposure to each factor, and $\epsilon_t$ represents unexplained return.  
 ### Significant Results
 | Variable | Beta | p-value |
@@ -25,7 +25,7 @@ A reduced model was therefore fitted using only these factors to avoid including
 Although the full model achieves a higher $R^2$, the reduced model produced a higher **adjusted** $R^2$ and a lower AIC. This suggests that, within this sample period, removing insignificant factors improves model efficiency by reducing unnecessary complexity. 
 
 The final model used in further analysis is therefore the reduced model:
-$$ R_t = 0.0093 - 0.5717F_{Value,t} + 0.1440F_{Credit,t} + \epsilon_t $$
+$$R_t = 0.0093 - 0.5717F_{Value,t} + 0.1440F_{Credit,t} + \epsilon_t$$
 where $F_{Value,t}$ and $F_{Credit,t}$ represent the Value vs Growth and Credit
 factor returns respectively.
 
@@ -57,11 +57,11 @@ The Q-Q plot shows residuals closely following the theoretical normal distributi
 
 ## Q2.3. Strategy Comparison
 To investigate whether investing directly in the hedge fund was more profitable than replicating its factor exposure, a factor portfolio was constructed using the estimated betas from the reduced model.
-$$ R_factor = -0.5717F_{Value,t} + 0.1440F_{Credit,t} + \epsilon_t $$
+$$R_factor = -0.5717F_{Value,t} + 0.1440F_{Credit,t} + \epsilon_t$$
 Alpha was excluded because an independent investor cannot directly buy the manager's alpha.
 
 The performance of both strategies was evaluated using the Sharpe ratio:
-$$ Sharpe = \frac{R}{\sigma} $$
+$$Sharpe = \frac{R}{\sigma}$$
 where $R$ represents the average return and $\sigma$ represents return volatility. A risk-free rate of zero was assumed. 
 
 | Strategy | Average Return | Volatility | Sharpe Ratio |
