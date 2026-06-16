@@ -1,4 +1,4 @@
-DATA_PATH = "data.xlsx"
+DATA_PATH = "data/data.xlsx"
 
 DATE_COL = "perf_date"
 TARGET_COL = "Hedge Fund"
