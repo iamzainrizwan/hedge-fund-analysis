@@ -3,12 +3,18 @@ import pandas as pd
 import config
 
 
-def load_data():
+def load_data() -> pd.DataFrame:
+    """loads raw returns data from configured excel path."""
     df = pd.read_excel(config.DATA_PATH)
     return df
 
 
-def clean_data(df):
+def clean_data(df: pd.DataFrame) -> pd.DataFrame:
+    """cleans the raw dataframe.
+
+    - parses and sorts dates
+    - removes observation where factor return exceeds magnitude threshold (|x| > 2)
+    """
     # keep only required cols
     cols = [config.DATE_COL, config.TARGET_COL] + config.FACTOR_COLS
     df = df[cols].copy()

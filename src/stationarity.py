@@ -4,7 +4,13 @@ from statsmodels.tsa.api import adfuller
 from model import FactorModel
 
 
-def rolling_betas(df, factors, window=36):
+def rolling_betas(
+    df: pd.DataFrame, factors: list[str], window: int = 36
+) -> pd.DataFrame:
+    """computes rolling OLS betas over a sliding window.
+
+    returns a dataframe of beta estimates, one row per window.
+    """
     betas = []
 
     for i in range(window, len(df)):
@@ -16,10 +22,10 @@ def rolling_betas(df, factors, window=36):
     return pd.DataFrame(betas)
 
 
-def adf_beta_test(betas, factor):
+def adf_beta_test(betas: pd.Series, factor: str):
     result = adfuller(betas.dropna())
 
-    statistics = result[0]
+    statistic = result[0]
     p_value = result[1]
 
     print(f"{factor} beta ADF p-value: {p_value:.4f}")
