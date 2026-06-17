@@ -10,6 +10,10 @@ multilinear regression analysis of hedge fund returns against systematic risk fa
 - compares hedge fund performance against a passive factor portfolio using sharpe ratio, annualised volatility, and maximum drawdown
 - assesses beta stationarity using rolling regressions and augmented dickey-fuller tests
 
+## report
+
+written analysis is in `report/`. you may read its .md source or the compiled pdf :)
+
 ## structure
 
 ```
@@ -24,8 +28,9 @@ multilinear regression analysis of hedge fund returns against systematic risk fa
 ├── data/
 │   └── data.xlsx
 ├── plots/               # output plots saved here
-└── docs/
-    └── q2.md            # full written analysis
+└── report/
+    └── report.md
+    └── report.pdf
 ```
 
 ## setup
@@ -42,7 +47,7 @@ uv sync
 uv run src/main.py
 ```
 
-plots are saved to `plots/`. written analysis is in `docs/q2.md`.
+plots are saved to `plots/`.
 
 ## ai usage
 
