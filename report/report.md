@@ -62,6 +62,7 @@ The Jarque–Bera test (p = 0.019) suggests mild departure from normality in the
 Residuals were examined to evaluate model assumptions. The residuals appear centred around zero with no clear non-linear pattern, supporting the use of a linear regression model.
 
 ![Residual Plot](../plots/residuals.png)
+
 The Breusch-Pagan test returned p = 0.953, providing no evidence of heteroskedasticity. Residual variance appears consistent across the sample period, supporting the use of standard errors.
 
 The Q-Q plot shows residuals closely following the theoretical normal distribution across most of the range, with some deviation in the lower tail. This is consistent with the Jarque-Bera result and is typical of financial returns data where extreme negative events occur more frequently than a normal distribution would predict.
