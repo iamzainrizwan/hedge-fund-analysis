@@ -32,6 +32,7 @@ def plot_qq(results) -> None:
     sm.qqplot(results.resid, line="45", fit=True)
     plt.title("Q-Q Plot of Regression Residuals")
     plt.savefig("plots/qq_plot.png")
+    plt.close()
 
 
 def test_heteroskedasticity(model):

@@ -33,7 +33,7 @@ def run_evaluation(results):
     evaluation.plot_residuals(results)
     evaluation.plot_qq(results)
     lm_pvalue = evaluation.test_heteroskedasticity(results)
-    print(f"Breush-Pagan p-value: {lm_pvalue:.4f}")
+    print(f"Breusch-Pagan p-value: {lm_pvalue:.4f}")
 
 
 def run_strategy(df, results):

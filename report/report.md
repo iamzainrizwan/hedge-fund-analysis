@@ -1,8 +1,3 @@
----
-geometry: margin=0.7in
-mainfont: Times New Roman
----
-
 # Question 2 - Hedge Fund Analysis
 
 ## Data Preparation
@@ -66,13 +61,12 @@ The Jarque–Bera test (p = 0.019) suggests mild departure from normality in the
 
 Residuals were examined to evaluate model assumptions. The residuals appear centred around zero with no clear non-linear pattern, supporting the use of a linear regression model.
 
-![Residual Plot](../plots/residuals.png){ width=50% }
-
+![Residual Plot](../plots/residuals.png)
 The Breusch-Pagan test returned p = 0.953, providing no evidence of heteroskedasticity. Residual variance appears consistent across the sample period, supporting the use of standard errors.
 
 The Q-Q plot shows residuals closely following the theoretical normal distribution across most of the range, with some deviation in the lower tail. This is consistent with the Jarque-Bera result and is typical of financial returns data where extreme negative events occur more frequently than a normal distribution would predict.
 
-![Q-Q Plot](../plots/qq_plot.png){ width=50% }
+![Q-Q Plot](../plots/qq_plot.png)
 
 ## Q2.3. Strategy Comparison
 
@@ -118,7 +112,7 @@ Therefore, risk is not dominated by a single strategy and depends on whether vol
 
 Rolling regressions were used to assess whether factor betas are stable over time.
 
-![Rolling Betas](../plots/rolling_betas.png){ width=50% }
+![Rolling Betas](../plots/rolling_betas.png)
 
 The plots show that both Value vs Growth and Credit betas vary materially over time, with Value vs Growth exhibiting particularly large swings and an extended period of strongly negative exposure. In contrast, the Credit beta fluctuates but remains more stable, while alpha remains relatively constant.
 
